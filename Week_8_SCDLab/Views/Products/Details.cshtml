@@ -1,0 +1,28 @@
+﻿@model Week_8_SCDLab.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>Product Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Name</dt>
+        <dd class="col-sm-10">@Model.ProductName</dd>
+
+        <dt class="col-sm-2">Description</dt>
+        <dd class="col-sm-10">@Model.ProductDescription</dd>
+
+        <dt class="col-sm-2">Quantity</dt>
+        <dd class="col-sm-10">@Model.Quantity</dd>
+
+        <dt class="col-sm-2">Stock Price</dt>
+        <dd class="col-sm-10">@Model.StockPrice</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.ProductId" class="btn btn-primary">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back</a>
